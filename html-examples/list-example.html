@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML列表示例</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        ul.custom { list-style-type: square; }
+        ol.custom { list-style-type: upper-roman; }
+    </style>
+</head>
+<body>
+    <h1>HTML列表类型示例</h1>
+
+    <!-- 无序列表 -->
+    <h2>无序列表 (ul)</h2>
+    <ul>
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>橙子</li>
+    </ul>
+
+    <!-- 自定义样式的无序列表 -->
+    <ul class="custom">
+        <li>红色</li>
+        <li>绿色</li>
+        <li>蓝色</li>
+    </ul>
+
+    <!-- 有序列表 -->
+    <h2>有序列表 (ol)</h2>
+    <ol>
+        <li>第一步</li>
+        <li>第二步</li>
+        <li>第三步</li>
+    </ol>
+
+    <!-- 自定义样式的有序列表 -->
+    <ol class="custom" start="10">
+        <li>第十项</li>
+        <li>第十一项</li>
+        <li>第十二项</li>
+    </ol>
+
+    <!-- 定义列表 -->
+    <h2>定义列表 (dl)</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表</dd>
+        <dt>JavaScript</dt>
+        <dd>网页脚本语言</dd>
+    </dl>
+
+    <!-- 嵌套列表 -->
+    <h2>嵌套列表</h2>
+    <ul>
+        <li>水果
+            <ul>
+                <li>苹果</li>
+                <li>香蕉</li>
+            </ul>
+        </li>
+        <li>蔬菜
+            <ol>
+                <li>胡萝卜</li>
+                <li>西兰花</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>

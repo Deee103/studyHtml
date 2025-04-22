@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe标签示例</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        iframe { border: 1px solid #ddd; margin-bottom: 20px; }
+        .iframe-container { display: flex; gap: 20px; }
+    </style>
+</head>
+<body>
+    <h1>iframe标签使用示例</h1>
+
+    <!-- 基本用法 -->
+    <h2>1. 嵌入外部网页</h2>
+    <iframe src="https://www.example.com" width="100%" height="300"></iframe>
+
+    <!-- 嵌入本地内容 -->
+    <h2>2. 嵌入本地PDF文件</h2>
+    <iframe src="./documents/sample.pdf" width="100%" height="500"></iframe>
+
+    <!-- 与超链接配合使用 -->
+    <h2>3. 动态内容加载</h2>
+    <div>
+        <a href="https://www.baidu.com" target="dynamicFrame">百度</a> |
+        <a href="https://www.taobao.com" target="dynamicFrame">淘宝</a> |
+        <a href="https://www.jd.com" target="dynamicFrame">京东</a>
+    </div>
+    <iframe name="dynamicFrame" width="100%" height="300"></iframe>
+
+    <!-- 多个iframe布局 -->
+    <h2>4. 多iframe布局</h2>
+    <div class="iframe-container">
+        <iframe src="https://www.163.com" width="45%" height="300"></iframe>
+        <iframe src="https://www.sina.com.cn" width="45%" height="300"></iframe>
+    </div>
+
+    <!-- 安全设置 -->
+    <h2>5. 安全设置示例</h2>
+    <iframe src="https://www.example.com" 
+            sandbox="allow-scripts allow-same-origin" 
+            allow="geolocation; microphone; camera"
+            referrerpolicy="no-referrer"
+            width="100%" 
+            height="300">
+    </iframe>
+
+    <!-- 响应式iframe -->
+    <h2>6. 响应式iframe</h2>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>

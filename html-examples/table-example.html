@@ -1,28 +1,116 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML表格示例</title>
-</head>
-<body>
-    <h1>表格示例</h1>
-    <table border="1">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML表格完整示例</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      caption {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+      .highlight {
+        background-color: #ffffcc;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 基础表格结构 -->
+    <table>
+      <caption>
+        学生成绩表
+      </caption>
+      <thead>
         <tr>
-            <th>姓名</th>
-            <th>年龄</th>
-            <th>城市</th>
+          <th>学号</th>
+          <th>姓名</th>
+          <th>语文</th>
+          <th>数学</th>
+          <th>英语</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>001</td>
+          <td>张三</td>
+          <td>85</td>
+          <td>90</td>
+          <td>78</td>
+        </tr>
+        <tr class="highlight">
+          <td>002</td>
+          <td>李四</td>
+          <td>92</td>
+          <td>88</td>
+          <td>95</td>
         </tr>
         <tr>
-            <td>张三</td>
-            <td>25</td>
-            <td>北京</td>
+          <td>003</td>
+          <td>王五</td>
+          <td>78</td>
+          <td>85</td>
+          <td>82</td>
         </tr>
+      </tbody>
+      <tfoot>
         <tr>
-            <td>李四</td>
-            <td>30</td>
-            <td>上海</td>
+          <td colspan="2">平均分</td> <!-- 合并列 -->
+          <td>85</td>
+          <td>87.67</td>
+          <td>85</td>
         </tr>
+      </tfoot>
     </table>
-</body>
+
+    <!-- 合并单元格示例 -->
+    <table>
+      <caption>
+        课程时间表
+      </caption>
+      <tr>
+        <th rowspan="2">时间</th> <!-- 合并行 -->
+        <th colspan="5">星期</th>
+      </tr>
+      <tr>
+        <th>周一</th>
+        <th>周二</th>
+        <th>周三</th>
+        <th>周四</th>
+        <th>周五</th>
+      </tr>
+      <tr>
+        <td>8:00-10:00</td>
+        <td>数学</td>
+        <td>语文</td>
+        <td rowspan="2">体育</td>
+        <td>英语</td>
+        <td>物理</td>
+      </tr>
+      <tr>
+        <td>10:00-12:00</td>
+        <td>化学</td>
+        <td>历史</td>
+        <td>地理</td>
+        <td>生物</td>
+      </tr>
+    </table>
+  </body>
 </html>
