@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>常用表格属性示例</title>
+    <style>
+        /* 表格边框 */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* 表格单元格边框 */
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* 表格标题背景色 */
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* 表格行背景色 */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* 表格行悬停效果 */
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        /* 表格单元格宽度 */
+        .col-width {
+            width: 150px;
+        }
+
+        /* 表格单元格对齐方式 */
+        .text-center {
+            text-align: center;
+        }
+
+        /* 表格单元格垂直对齐 */
+        .vertical-align {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-width">列1</th>
+                <th>列2</th>
+                <th class="text-center">列3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="vertical-align">行1列1</td>
+                <td>行1列2</td>
+                <td class="text-center">行1列3</td>
+            </tr>
+            <tr>
+                <td class="vertical-align">行2列1</td>
+                <td>行2列2</td>
+                <td class="text-center">行2列3</td>
+            </tr>
+            <tr>
+                <td class="vertical-align">行3列1</td>
+                <td>行3列2</td>
+                <td class="text-center">行3列3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

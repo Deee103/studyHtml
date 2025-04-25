@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>块级元素、行内元素和行内块元素示例</title>
+    <style>
+        /* 块级元素 */
+        .block {
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+        }
+
+        /* 行内元素 */
+        .inline {
+            display: inline;
+            background-color: orange;
+            padding: 5px;
+        }
+
+        /* 行内块元素 */
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background-color: lightgreen;
+            margin: 10px;
+        }
+
+        /* 隐藏元素 */
+        .none {
+            display: none;
+        }
+
+        /* 弹性盒子 */
+        .flex {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        /* 网格布局 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: #e0e0e0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">这是一个块级元素</div>
+    <span class="inline">这是一个行内元素</span>
+    <span class="inline">这是另一个行内元素</span>
+    <div class="inline-block">这是一个行内块元素</div>
+    <div class="inline-block">这是另一个行内块元素</div>
+    <div class="none">这是一个隐藏元素</div>
+    <div class="flex">
+        <div>弹性盒子1</div>
+        <div>弹性盒子2</div>
+        <div>弹性盒子3</div>
+    </div>
+    <div class="grid">
+        <div>网格1</div>
+        <div>网格2</div>
+        <div>网格3</div>
+    </div>
+</body>
+</html>
