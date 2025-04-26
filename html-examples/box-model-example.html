@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型示例</title>
+    <style>
+        /* 盒子模型 */
+        .box {
+            width: 200px; /* 内容宽度 */
+            height: 100px; /* 内容高度 */
+            padding: 20px; /* 内边距 */
+            border: 10px solid #333; /* 边框 */
+            margin: 30px; /* 外边距 */
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        /* 盒子模型的不同部分 */
+        .box-content {
+            background-color: lightgreen;
+            width: 100%;
+            height: 100%;
+        }
+
+        .box-padding {
+            background-color: lightcoral;
+            padding: 20px;
+        }
+
+        .box-border {
+            background-color: lightblue;
+            border: 10px solid #333;
+        }
+
+        .box-margin {
+            background-color: lightyellow;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-content">内容区域</div>
+    </div>
+    <div class="box-padding">内边距区域</div>
+    <div class="box-border">边框区域</div>
+    <div class="box-margin">外边距区域</div>
+</body>
+</html>

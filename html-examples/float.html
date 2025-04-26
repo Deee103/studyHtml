@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .leftfix {
+        float: left;
+      }
+      .rightfix {
+        float: right;
+      }
+      /* 
+        .clearfix::after 是一个常见的 CSS 技巧，用于清除浮动（float）带来的影响。
+
+        当元素使用了 float 属性后，它会脱离正常的文档流，这可能导致其父元素无法正确包裹这些浮动元素，造成高度塌陷的问题。
+
+        这段代码通过伪元素 ::after 在 .clearfix 类的元素末尾插入一个空内容（content: '';），
+        将这个伪元素的显示方式设置为块级元素（display: block;），
+        然后使用 clear: both; 清除左右两侧的浮动，从而确保父元素能够正确包裹所有浮动子元素，避免高度塌陷。
+*/
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .logo {
+        width: 200px;
+      }
+      .banner1 {
+        width: 540px;
+        margin: 0 10px;
+      }
+      .banner2 {
+        width: 200px;
+      }
+      .logo,
+      .banner1,
+      .banner2 {
+        height: 80px;
+        background-color: bisque;
+        line-height: 80px;
+      }
+      .menu {
+        height: 30px;
+        background-color: aquamarine;
+        line-height: 30px;
+        margin: 10px 0;
+      }
+      .left1,
+      .left2,
+      .left3,
+      .left4,
+      .left5,
+      .left6 {
+        height: 198px;
+        background-color: bisque;
+        line-height: 198px;
+        margin-right: 10px;
+        border: 1px solid black;
+      }
+      .left1,
+      .left2 {
+        width: 368px;
+      }
+      .left3,
+      .left4,
+      .left5,
+      .left6 {
+        width: 178px;
+      }
+      .right1,
+      .right2,
+      .right3 {
+        background-color: bisque;
+        line-height: 128px;
+        border: 1px solid black;
+        height: 128px;
+        width: 198px;
+      }
+      .right2 {
+        margin: 10px 0;
+      }
+      .bottom {
+        margin-top: 10px;
+      }
+      .footer {
+        height: 30px;
+        background-color: aquamarine;
+        line-height: 30px;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <div class="header clearfix">
+        <div class="logo leftfix">logo</div>
+        <div class="banner1 leftfix">banner1</div>
+        <div class="banner2 leftfix">banner2</div>
+      </div>
+      <!-- menu -->
+      <div class="menu">menu</div>
+      <!-- content -->
+      <div class="content clearfix">
+        <div class="left leftfix">
+          <div class="top clearfix">
+            <div class="left1 leftfix">left1</div>
+            <div class="left2 leftfix">left2</div>
+          </div>
+          <div class="bottom clearfix">
+            <div class="left3 leftfix">left3</div>
+            <div class="left4 leftfix">left4</div>
+            <div class="left5 leftfix">left5</div>
+            <div class="left6 leftfix">left6</div>
+          </div>
+        </div>
+        <div class="right rightfix">
+          <div class="right1">right1</div>
+          <div class="right2">right2</div>
+          <div class="right3">right3</div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 600px;
+        background-color: red;
+      }
+      img {
+        height: 500px;
+        width: 500px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 幽灵空白问题通常发生在行内块元素与文本混排时。
+     由于行内块元素（如图片）与文本基线对齐，
+     而文本的基线与文本最底端之间存在一定距离，这会导致行内块元素下方出现不期望的空白区域。 -->
+    <!-- 父元素中只包含一张图片，
+     可以通过将图片的display属性设置为block来消除空白。
+     这样，图片将不再是行内元素，而是作为块级元素独立显示，从而避免基线对齐问题。 -->
+    <div>
+      <img src="images/我的自拍.jpg" alt="" />
+    </div>
+  </body>
+</html>

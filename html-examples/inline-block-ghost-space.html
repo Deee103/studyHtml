@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>行内块的幽灵空白问题</title>
+    <style>
+        .container {
+            width: 600px;
+            background-color: skyblue;
+        }
+
+        /* 幽灵空白问题 */
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+
+        /* 解决方案1：父元素设置 font-size: 0 */
+        .fix-font-size {
+            font-size: 0;
+        }
+
+        /* 解决方案2：子元素设置 vertical-align: bottom */
+        .fix-vertical-align {
+            vertical-align: bottom;
+        }
+
+        /* 解决方案3：子元素设置为块级元素 */
+        .fix-block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inline-block">行内块元素1</div>
+        <div class="inline-block">行内块元素2</div>
+    </div>
+
+    <!-- 解决方案示例 -->
+    <div class="container fix-font-size">
+        <div class="inline-block">解决方案1：font-size: 0</div>
+        <div class="inline-block">行内块元素2</div>
+    </div>
+
+    <div class="container">
+        <div class="inline-block fix-vertical-align">解决方案2：vertical-align: bottom</div>
+        <div class="inline-block">行内块元素2</div>
+    </div>
+
+    <div class="container">
+        <div class="inline-block fix-block">解决方案3：display: block</div>
+        <div class="inline-block">行内块元素2</div>
+    </div>
+</body>
+</html>
