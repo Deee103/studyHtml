@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文档流与脱离文档流示例</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: orange;
+        }
+        .float {
+            float: left;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">文档流中的元素</div>
+    <div class="box absolute">脱离文档流（absolute）</div>
+    <div class="box float">脱离文档流（float）</div>
+    <div class="box">文档流中的元素</div>
+</body>
+</html>

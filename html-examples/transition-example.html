@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition 示例</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            transition: all 0.5s ease; /* 过渡效果 */
+        }
+        .box:hover {
+            width: 150px; /* 宽度变化 */
+            height: 150px; /* 高度变化 */
+            background-color: orange; /* 背景颜色变化 */
+            transform: rotate(45deg); /* 旋转效果 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">悬停我</div>
+</body>
+</html>

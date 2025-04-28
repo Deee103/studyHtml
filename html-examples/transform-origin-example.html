@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform Origin 示例</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+        .rotate {
+            transform: rotate(45deg); /* 旋转 45 度 */
+            transform-origin: top left; /* 变换原点为左上角 */
+        }
+        .scale {
+            transform: scale(1.5); /* 放大 1.5 倍 */
+            transform-origin: center; /* 变换原点为中心 */
+        }
+        .translate {
+            transform: translate(50px, 50px); /* 向右下平移 50px */
+            transform-origin: bottom right; /* 变换原点为右下角 */
+        }
+        .skew {
+            transform: skew(20deg, 10deg); /* 倾斜 20 度和 10 度 */
+            transform-origin: 50% 50%; /* 变换原点为中心 */
+        }
+        .multiple {
+            transform: rotate(30deg) scale(1.2) translate(30px, 30px); /* 组合变换 */
+            transform-origin: 0 0; /* 变换原点为左上角 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate">旋转</div>
+        <div class="box scale">缩放</div>
+        <div class="box translate">平移</div>
+        <div class="box skew">倾斜</div>
+        <div class="box multiple">组合</div>
+    </div>
+</body>
+</html>

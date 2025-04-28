@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC 示例</title>
+    <style>
+        .container {
+            width: 300px;
+            border: 1px solid #000;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin: 10px;
+        }
+        .float {
+            float: left;
+            background-color: orange;
+        }
+        .bfc {
+            overflow: hidden; /* 创建 BFC */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box float">浮动元素</div>
+        <div class="box bfc">BFC 元素</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Transform3D 示例</title>
+    <style>
+        body {
+            perspective: 1000px; /* 设置透视效果 */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            transition: transform 0.5s; /* 添加过渡效果 */
+        }
+        .rotate3d {
+            transform: rotate3d(1, 1, 1, 45deg); /* 3D 旋转 */
+        }
+        .scale3d {
+            transform: scale3d(1.5, 1.5, 1.5); /* 3D 缩放 */
+        }
+        .translate3d {
+            transform: translate3d(50px, 50px, 50px); /* 3D 平移 */
+        }
+        .perspective {
+            transform: perspective(500px) rotateY(45deg); /* 透视 + 旋转 */
+        }
+        .multiple3d {
+            transform: rotate3d(1, 1, 1, 30deg) scale3d(1.2, 1.2, 1.2) translate3d(30px, 30px, 30px); /* 组合变换 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate3d">3D 旋转</div>
+        <div class="box scale3d">3D 缩放</div>
+        <div class="box translate3d">3D 平移</div>
+        <div class="box perspective">透视</div>
+        <div class="box multiple3d">组合</div>
+    </div>
+</body>
+</html>
